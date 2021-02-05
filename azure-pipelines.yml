@@ -56,11 +56,11 @@ jobs:
     value: true
     # FileName where TestAutomationURLs are stored in JSON format
   - name: TestUrlFileName 
-    value: TestAutomationURLs.json
+    value: TestURLs.json
     # Project name of repo containing TestAutomationURLs (spaces should be encoded as %20)
     # Example: Contoso Test Framework --> Contoso%20Test%20Framework
   - name: LocalProjectName
-    value: PowerAppsTestAutomation
+    value: zycode
 
   steps:
   - checkout: self
@@ -73,6 +73,6 @@ jobs:
       OnlineUrl: $(PortalUrl)
       BrowserType: ${{ parameters.BrowserType }}
       # File location format is /s/TeamProjectName/FilePathToTestAutomationURLs.json
-      TestAutomationURLFilePath: $(Build.SourcesDirectory)\$(LocalProjectName)\Samples\$(TestUrlFileName)
+      TestAutomationURLFilePath: zhaoyong987/zycode/TestAutomationURLs.json
       UsePrivateMode: $(PrivateMode)
       LoginMethod: ${{ parameters.LoginMethod }}
